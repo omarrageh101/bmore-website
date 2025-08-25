@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import products from "../src/data/products.json" assert { type: "json" };
+const products = JSON.parse(fs.readFileSync(path.resolve("src/data/products.json"), "utf8"));
 
 const base = "https://example.com"; // <-- change after deploying
 const staticRoutes = [
