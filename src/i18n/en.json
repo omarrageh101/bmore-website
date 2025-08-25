@@ -1,0 +1,11 @@
+{
+  "nav": { "home": "Home", "products": "Products", "about": "About", "quality": "Quality", "contact": "Contact" },
+  "hero": { "title": "Glow. Grow. Glow Again.", "cta": "View Products" },
+  "common": {
+    "gummies": "Gummies",
+    "sugarSub": "Sugar Substitute",
+    "buyNoon": "Buy on Noon",
+    "wholesale": "Wholesale & Export",
+    "notMedical": "Not intended to diagnose, treat, cure, or prevent any disease."
+  }
+}
