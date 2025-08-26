@@ -4,7 +4,7 @@ export default function ProductCard({ p }) {
   return (
     <Link
       to={`/products/${p.slug}`}
-      className="rounded-2xl border hover:shadow-md transition block overflow-hidden"
+  className="rounded-2xl border hover:shadow-xl hover:scale-105 transition-transform duration-300 block overflow-hidden cursor-pointer"
       style={{ borderColor: p.accent }}
     >
       <img

@@ -39,8 +39,8 @@ export default function Product() {
           <p className="opacity-70">{p.shortEN}</p>
           <div className="text-sm opacity-70">{p.count} Gummies • Flavor: {p.flavor}</div>
           <div className="flex gap-2">
-            <a href="#" className="px-4 py-2 rounded-xl border">Buy on Noon</a>
-            <a href="/contact" className="px-4 py-2 rounded-xl bg-black text-white">Wholesale & Export</a>
+            <a href="#" className="px-4 py-2 rounded-xl border hover:bg-neutral-100 hover:scale-105 hover:shadow transition duration-200">Buy on Noon</a>
+            <a href="/contact" className="px-4 py-2 rounded-xl bg-black text-white hover:bg-neutral-900 hover:scale-105 hover:shadow-xl transition duration-200">Wholesale & Export</a>
           </div>
           <div>
             <h3 className="font-semibold mt-4 mb-2">What’s Inside</h3>
