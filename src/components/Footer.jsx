@@ -2,24 +2,55 @@ import site from "../data/site.json";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-50 border-t">
-      <div className="container py-8 text-sm">
-        <div className="flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
-          <div className="flex items-center gap-2">
-            <span className="font-bold text-lg tracking-wide">BMORE</span>
+    <footer className="footer-surface border-t text-neutral-800">
+      <div className="footer-blob pink" aria-hidden />
+      <div className="footer-blob blue" aria-hidden />
+
+      {/* SAME SHELL AS HEADER */}
+      <div className="shell-full py-10 relative">
+        {/* 3 columns; brand column left, policies right */}
+        <div className="grid gap-6 md:grid-cols-[minmax(90px,auto)_1fr_auto] items-start">
+          {/* Col 1: brand logo, left-aligned like header, with copyright below */}
+          <div className="flex flex-col items-start justify-start">
+            <span className="font-extrabold tracking-wide brand-gradient text-2xl md:text-3xl leading-tight">
+              BMORE
+            </span>
+            <p className="mt-3 text-neutral-700 text-left">© {new Date().getFullYear()} BMORE.</p>
           </div>
-          <div>
-            <div>{site.legalEntityEN}</div>
-            <div>Email: <a href={`mailto:${site.email}`}>{site.email}</a></div>
-            <div>Phone: {site.phone}</div>
+
+          {/* Col 2: company info, centered horizontally */}
+          <div className="space-y-1 flex flex-col items-center text-center">
+            <div className="text-neutral-900 font-medium">
+              Brand owner: {site.legalEntityEN}
+            </div>
+            <div>
+              Email:{" "}
+              <a
+                href={`mailto:${site.email}`}
+                className="underline underline-offset-4 hover:text-neutral-950 px-1 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400/60 font-medium"
+              >
+                {site.email}
+              </a>
+            </div>
+            {site.founded && <div className="text-neutral-700">Founded: {site.founded}</div>}
           </div>
-          <div className="flex gap-4">
-            <a href="/policies/privacy">Privacy</a>
-            <a href="/policies/terms">Terms</a>
-            <a href="/policies/returns">Returns</a>
-          </div>
+
+          {/* Col 3: policy links (right aligned on desktop) */}
+          <nav className="flex gap-7 md:justify-end">
+            <a
+              href="/policies/privacy"
+              className="nav-link px-3 py-2 rounded-md hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400/60 text-base font-semibold"
+            >
+              Privacy
+            </a>
+            <a
+              href="/policies/terms"
+              className="nav-link px-3 py-2 rounded-md hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400/60 text-base font-semibold"
+            >
+              Terms
+            </a>
+          </nav>
         </div>
-        <p className="mt-4 opacity-60">© {new Date().getFullYear()} BMORE.</p>
       </div>
     </footer>
   );

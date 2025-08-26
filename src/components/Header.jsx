@@ -1,7 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+  const panelRef = useRef(null);
+
   const nav = [
     { to: "/", label: "Home" },
     { to: "/products", label: "Products" },
@@ -9,54 +12,87 @@ export default function Header() {
     { to: "/quality", label: "Quality" },
     { to: "/contact", label: "Contact" }
   ];
-  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onKey = (e) => e.key === "Escape" && setOpen(false);
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
+  useEffect(() => {
+    function onClick(e) {
+      if (open && panelRef.current && !panelRef.current.contains(e.target)) setOpen(false);
+    }
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, [open]);
+
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
-      <div className="container flex items-center gap-4 py-3 relative">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="font-bold tracking-wide text-lg">BMORE</span>
+    <header className="fixed top-0 inset-x-0 z-50 header-glass">
+  <div className="relative shell-full flex flex-nowrap items-center justify-between py-3">
+        {/* Brand left, vertically centered, not stuck to edge */}
+  <Link to="/" className="flex items-center">
+          <span className="font-extrabold tracking-wide brand-gradient text-2xl md:text-3xl leading-tight">BMORE</span>
         </Link>
-        <nav className="ml-auto hidden md:flex gap-5">
+
+        {/* Desktop nav right, vertically centered */}
+        <nav className="hidden md:flex items-center gap-7">
           {nav.map((n) => (
             <NavLink
               key={n.to}
               to={n.to}
               className={({ isActive }) =>
-                `hover:opacity-100 opacity-70 ${isActive ? "font-semibold" : ""}`
+                [
+                  "nav-link px-3 py-2 rounded-md text-base font-semibold transition",
+                  "text-neutral-800 hover:text-neutral-950",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400/60",
+                  isActive ? "font-bold text-neutral-950" : ""
+                ].join(" ")
               }
             >
               {n.label}
             </NavLink>
           ))}
         </nav>
-        {/* Mobile menu button */}
+
+        {/* Mobile hamburger */}
         <button
-          className="ml-auto md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-brand"
+          className="md:hidden inline-flex items-center justify-center p-2 rounded-md border ml-2"
+          aria-label="Open menu"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
-          aria-label="Open navigation menu"
         >
-          <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+          ☰
         </button>
-        {/* Mobile nav */}
-        {open && (
-          <div className="absolute top-full left-0 w-full bg-white shadow-lg rounded-b-xl flex flex-col items-center py-4 animate-fade-in md:hidden z-50">
+
+        {/* Gradient accent line under header */}
+        <div className="header-accent absolute left-0 right-0 bottom-0" aria-hidden />
+      </div>
+
+      {/* Mobile panel (slight glass look) */}
+      {open && (
+        <div id="mobile-menu" className="md:hidden px-3 pb-3">
+          <div ref={panelRef} className="rounded-xl border bg-white/90 backdrop-blur p-2 shadow-lg flex flex-col">
             {nav.map((n) => (
               <NavLink
                 key={n.to}
                 to={n.to}
-                className={({ isActive }) =>
-                  `block w-full text-center py-2 px-4 hover:bg-brand/10 ${isActive ? "font-semibold text-brand" : ""}`
-                }
                 onClick={() => setOpen(false)}
+                className={({ isActive }) =>
+                  [
+                    "nav-link block px-3 py-3 rounded-lg text-base font-semibold transition",
+                    "text-neutral-800 hover:bg-neutral-100 hover:text-neutral-950",
+                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400/60",
+                    isActive ? "font-bold text-neutral-950" : ""
+                  ].join(" ")
+                }
               >
                 {n.label}
               </NavLink>
             ))}
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 }
