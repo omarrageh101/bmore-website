@@ -3,11 +3,11 @@ export default function Privacy() {
     <section className="hero-wrap min-h-[60vh] relative flex flex-col items-center justify-center py-16 px-4">
       <div className="hero-bg absolute inset-0" aria-hidden />
       <div className="relative z-10 max-w-2xl w-full text-center space-y-8">
-        <h1 className="hero-title mb-2">Privacy Policy</h1>
-        <p className="text-sm opacity-70 mb-6">Last updated: 26 Aug 2025</p>
+  <h1 className="hero-title mb-2 hover:scale-105 hover:drop-shadow-lg transition-transform duration-200 cursor-pointer">Privacy Policy</h1>
+  <p className="text-sm opacity-70 mb-6 hover:text-pink-600 transition-colors duration-200 cursor-pointer">Last updated: 26 Aug 2025</p>
 
         <section className="space-y-4 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold">Who we are</h2>
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">Who we are</h2>
           <p>
             BMORE is a wellness brand owned by <strong>nami first for trading</strong> (founded
             in <strong>2023</strong>). This website is an informational portfolio for our products.
@@ -20,8 +20,8 @@ export default function Privacy() {
         </section>
 
         <section className="space-y-4 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold">What we collect</h2>
-          <ul className="list-disc pl-5 space-y-2 text-base">
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">What we collect</h2>
+          <ul className="list-disc pl-5 space-y-2 text-base hover:list-inside hover:text-blue-600 transition-colors duration-200 cursor-pointer">
             <li>
               <strong>Information you provide</strong>: when you submit our contact form (name, email,
               company, country, purpose, message).
@@ -41,8 +41,8 @@ export default function Privacy() {
         </section>
 
         <section className="space-y-4 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold">How we use your data (purposes & legal bases)</h2>
-          <ul className="list-disc pl-5 space-y-2 text-base">
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">How we use your data (purposes & legal bases)</h2>
+          <ul className="list-disc pl-5 space-y-2 text-base hover:list-inside hover:text-blue-600 transition-colors duration-200 cursor-pointer">
             <li>
               <strong>To respond to inquiries</strong> (consent / legitimate interests).
             </li>
@@ -56,7 +56,7 @@ export default function Privacy() {
         </section>
 
         <section className="space-y-4 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold">Sharing your data</h2>
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">Sharing your data</h2>
           <p>
             We share personal data only with service providers that help us run this website, such as
             hosting, content delivery, email, and our contact-form provider (acting as our processor).
@@ -67,7 +67,7 @@ export default function Privacy() {
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-xl md:text-2xl font-semibold">International transfers</h2>
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">International transfers</h2>
           <p>
             If personal data is transferred internationally, we use appropriate safeguards (e.g., EU
             Standard Contractual Clauses where applicable).
@@ -75,7 +75,7 @@ export default function Privacy() {
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-xl md:text-2xl font-semibold">Retention</h2>
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">Retention</h2>
           <p>
             Contact submissions are kept for up to <strong>24 months</strong> (or shorter if no longer
             needed) and then deleted or anonymized. Server logs are kept for a short period for security.
@@ -83,7 +83,7 @@ export default function Privacy() {
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-xl md:text-2xl font-semibold">Security</h2>
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">Security</h2>
           <p>
             We use reasonable technical and organizational measures (e.g., HTTPS, access controls). No
             method of transmission or storage is 100% secure.
@@ -91,7 +91,7 @@ export default function Privacy() {
         </section>
 
         <section className="space-y-4">
-          <h2 className="text-xl md:text-2xl font-semibold">Your rights</h2>
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">Your rights</h2>
           <p>
             Depending on your location, you may have rights to access, correct, delete, restrict or
             object to processing, and to data portability. You can withdraw consent at any time. You may
@@ -99,7 +99,7 @@ export default function Privacy() {
           </p>
           <p>
             To exercise your rights, email{' '}
-            <a className="underline" href="mailto:info@namai.com.co">info@namai.com.co</a>.
+            <a className="underline hover:text-blue-700 transition-colors duration-200" href="mailto:info@namai.com.co">info@namai.com.co</a>.
           </p>
         </section>
       </div>

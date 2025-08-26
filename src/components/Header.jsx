@@ -43,8 +43,7 @@ export default function Header() {
               className={({ isActive }) =>
                 [
                   "nav-link px-3 py-2 rounded-md text-base font-semibold transition",
-                  "text-neutral-800 hover:text-neutral-950",
-                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400/60",
+                  "text-neutral-800 hover:text-neutral-950 hover:bg-neutral-100 hover:scale-105 hover:shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400/60",
                   isActive ? "font-bold text-neutral-950" : ""
                 ].join(" ")
               }

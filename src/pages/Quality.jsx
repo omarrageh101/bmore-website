@@ -34,7 +34,7 @@ export default function Quality() {
           {qualityPoints.map((q, i) => (
             <div
               key={q.title}
-              className="bg-white/60 backdrop-blur-md rounded-2xl shadow-xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-2xl transition-transform duration-500"
+              className="bg-white/60 backdrop-blur-md rounded-2xl shadow-xl p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-2xl transition-transform duration-500 cursor-pointer"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <span className="text-4xl mb-2">{q.icon}</span>

@@ -3,11 +3,11 @@ export default function Terms() {
     <section className="hero-wrap min-h-[60vh] relative flex flex-col items-center justify-center py-16 px-4">
       <div className="hero-bg absolute inset-0" aria-hidden />
       <div className="relative z-10 max-w-2xl w-full text-center space-y-8">
-        <h1 className="hero-title mb-2">Terms of Use</h1>
-        <p className="text-sm opacity-70 mb-6">Last updated: 26 Aug 2025</p>
+  <h1 className="hero-title mb-2 hover:scale-105 hover:drop-shadow-lg transition-transform duration-200 cursor-pointer">Terms of Use</h1>
+  <p className="text-sm opacity-70 mb-6 hover:text-pink-600 transition-colors duration-200 cursor-pointer">Last updated: 26 Aug 2025</p>
 
         <section className="space-y-4 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold">Acceptance of terms</h2>
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">Acceptance of terms</h2>
           <p>
             These Terms govern your access to and use of this website operated by BMORE, owned by{' '}
             <strong>nami first for trading</strong>. By using the site, you agree to these Terms and to
@@ -16,7 +16,7 @@ export default function Terms() {
         </section>
 
         <section className="space-y-4 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold">Informational purpose only</h2>
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">Informational purpose only</h2>
           <p>
             This site provides general information about our products. It does not provide medical or
             healthcare advice and is not a substitute for professional guidance. Product descriptions on
@@ -26,7 +26,7 @@ export default function Terms() {
         </section>
 
         <section className="space-y-4 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold">Intellectual property</h2>
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">Intellectual property</h2>
           <p>
             All content on the site—including text, graphics, logos, and images—is owned by BMORE or our
             licensors and protected by law. You are granted a limited, non-exclusive, revocable license
@@ -36,8 +36,8 @@ export default function Terms() {
         </section>
 
         <section className="space-y-4 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold">Acceptable use</h2>
-          <ul className="list-disc pl-5 space-y-2 text-base">
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">Acceptable use</h2>
+          <ul className="list-disc pl-5 space-y-2 text-base hover:list-inside hover:text-blue-600 transition-colors duration-200 cursor-pointer">
             <li>No unlawful, harmful, or fraudulent activity.</li>
             <li>No attempts to disrupt or circumvent security or to scrape the site at scale.</li>
             <li>No use that infringes rights of others or violates applicable laws.</li>
@@ -45,7 +45,7 @@ export default function Terms() {
         </section>
 
         <section className="space-y-4 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold">Third-party links</h2>
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">Third-party links</h2>
           <p>
             The site may link to third-party services (e.g., retailer listings such as Noon). We are not
             responsible for their content, policies, or practices. Access at your own discretion.
@@ -53,7 +53,7 @@ export default function Terms() {
         </section>
 
         <section className="space-y-4 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold">Disclaimer; limitation of liability</h2>
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">Disclaimer; limitation of liability</h2>
           <p>
             The site is provided "as is" and "as available" without warranties of any kind. To the
             fullest extent permitted by law, BMORE and its owners shall not be liable for any indirect,
@@ -62,7 +62,7 @@ export default function Terms() {
         </section>
 
         <section className="space-y-4 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold">Indemnification</h2>
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">Indemnification</h2>
           <p>
             You agree to indemnify and hold BMORE and its owners harmless from claims arising out of your
             use of the site or breach of these Terms.
@@ -70,7 +70,7 @@ export default function Terms() {
         </section>
 
         <section className="space-y-4 text-left">
-          <h2 className="text-xl md:text-2xl font-semibold">Termination</h2>
+          <h2 className="text-xl md:text-2xl font-semibold hover:text-pink-600 transition-colors duration-200 cursor-pointer">Termination</h2>
           <p>
             We may suspend or terminate access to the site at any time, with or without notice, for any
             reason, including suspected misuse.

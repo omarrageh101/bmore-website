@@ -7,15 +7,15 @@ export default function About() {
         <h1 className="hero-title mb-4">About BMORE</h1>
         <p className="mb-8 text-lg text-neutral-700">Minimalist design. Transparent labels. Real results.</p>
         <div className="grid md:grid-cols-3 gap-6 mt-8">
-          <div className="rounded-xl bg-white/80 backdrop-blur p-6 shadow">
+          <div className="rounded-xl bg-white/80 backdrop-blur p-6 shadow hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer">
             <h3 className="font-semibold mb-2">Clean Formulations</h3>
             <p className="opacity-70">Focused actives and clear labeling.</p>
           </div>
-          <div className="rounded-xl bg-white/80 backdrop-blur p-6 shadow">
+          <div className="rounded-xl bg-white/80 backdrop-blur p-6 shadow hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer">
             <h3 className="font-semibold mb-2">Quality Mindset</h3>
             <p className="opacity-70">Manufacturing standards and batch coding.</p>
           </div>
-          <div className="rounded-xl bg-white/80 backdrop-blur p-6 shadow">
+          <div className="rounded-xl bg-white/80 backdrop-blur p-6 shadow hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer">
             <h3 className="font-semibold mb-2">Designed for Real Goals</h3>
             <p className="opacity-70">Simple routines that fit modern life.</p>
           </div>
